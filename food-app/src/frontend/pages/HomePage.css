@@ -1,0 +1,57 @@
+/* src/pages/HomePage.css */
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-page h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .carousel-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .new-menu, .weekly-specials {
+    margin-top: 40px;
+    width: 80%;
+  }
+  
+  .new-menu h2, .weekly-specials h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #555;
+  }
+  
+  .menu-items, .special-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu-item, .special-item {
+    text-align: center;
+  }
+  
+  .menu-item img, .special-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item p, .special-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #666;
+  }
+  

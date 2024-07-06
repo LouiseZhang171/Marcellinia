@@ -1,0 +1,146 @@
+.cart-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex: 1;
+  text-align: left;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls .quantity-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #bfb59d; /* 更改按钮颜色 */
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.quantity-controls span {
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+/* Modal styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #bfb59d; /* 主按钮颜色 */
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal button:last-child {
+  background-color: #ccc; /* 取消按钮颜色 */
+  color: black;
+}
+
+.proceed-button {
+  background-color: #a5a764;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.proceed-button:hover {
+  background-color: #8e9355;
+}
+
+/* Home and Menu link styles */
+.home-menu-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.home-menu-links a {
+  text-decoration: none;
+  color: #a5a764;
+  font-size: 18px;
+}
+
+.home-menu-links a:hover {
+  color: #8e9355;
+}
+
+
+
+
+
+
+
+

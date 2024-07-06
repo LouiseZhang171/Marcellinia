@@ -1,0 +1,95 @@
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* 为箭头预留位置 */
+  }
+  
+  .image-container {
+    width: calc(50% - 50px); /* 减去箭头的宽度 */
+  }
+  
+  .description-container {
+    width: calc(50% - 50px); /* 减去箭头的宽度 */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: relative;
+  }
+  
+  .slick-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    content: none;
+  }
+  
+  .slick-dots li button:before {
+    color: rgb(61, 62, 50);
+  }
+  
+  .custom-arrow {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    top: 30%; /* 定位到容器高度的50% */
+    transform: translateY(-50%); /* 使箭头垂直居中 */
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .custom-arrow.slick-prev {
+    left: 0px;
+  }
+  
+  .custom-arrow.slick-next {
+    right: 0px;
+  }
+  
+  .slick-dots {
+    bottom: 150px; /* 调整位置以提高三个点的位置 */
+    z-index: 2;
+    position: absolute; /* 使圆点定位正确 */
+    width: 100%; /* 使圆点在容器底部居中 */
+    text-align: center; /* 居中对齐圆点 */
+  }
+
+  .view-details-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-details-button:hover {
+    background-color: #444;
+  }
+  
+
