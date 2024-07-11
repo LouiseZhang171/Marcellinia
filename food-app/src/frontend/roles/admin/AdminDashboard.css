@@ -1,0 +1,26 @@
+.admin-dashboard-container {
+    padding: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .user-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .role-change-confirmation {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  

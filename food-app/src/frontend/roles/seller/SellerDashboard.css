@@ -1,0 +1,98 @@
+/* frontend/roles/seller/SellerDashboard.css */
+.seller-dashboard {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh; /* 确保页面内容撑满整个视口高度 */
+}
+
+.sidebar {
+  flex: 0 0 250px; /* 调整侧边栏宽度 */
+  padding: 20px;
+  border-right: 2px solid #b5b78b;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #302f2b;
+  border-bottom: 2px solid #22211e;
+  padding-bottom: 10px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff; /* 统一色调 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.orders-section {
+  margin-top: 20px;
+}
+
+.orders-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.orders-table th {
+  background-color: #007bff; /* 统一色调 */
+  color: white;
+  text-align: left;
+}
+
+.orders-table td button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table td button:hover {
+  background-color: #218838;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  flex-shrink: 0;
+}

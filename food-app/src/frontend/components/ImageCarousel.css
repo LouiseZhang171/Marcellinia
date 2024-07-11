@@ -78,7 +78,7 @@
   }
 
   .view-details-button {
-    background-color: #000;
+    background-color: #f5eaea;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -86,6 +86,7 @@
     font-size: 16px;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    outline: none; /* 去掉边框 */
   }
   
   .view-details-button:hover {

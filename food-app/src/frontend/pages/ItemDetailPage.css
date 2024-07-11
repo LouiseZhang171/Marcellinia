@@ -1,0 +1,74 @@
+/* src/pages/MenuPage.css */
+
+.menu-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.menu-list {
+  width: 30%;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.menu-item h3 {
+  margin: 0;
+}
+
+.menu-details img {
+  max-height: 300px; /* 你可以根据需要调整这个值 */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.quantity-button {
+  background-color: #d1b894;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.confirm-button {
+  background-color: #a5a764;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.totals {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.go-to-cart-button {
+  background-color: #858056;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+

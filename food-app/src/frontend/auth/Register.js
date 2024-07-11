@@ -1,12 +1,13 @@
-// src/auth/Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,9 +19,14 @@ const Register = () => {
       });
       console.log(response.data);
       alert('Registration successful');
+      navigate('/login');
     } catch (error) {
-      console.error(error);
-      alert('Registration failed');
+      console.error('Registration failed:', error);
+      if (error.response) {
+        alert('Registration failed: ' + error.response.data.message);
+      } else {
+        alert('Registration failed: ' + error.message);
+      }
     }
   };
 
@@ -56,4 +62,3 @@ const Register = () => {
 };
 
 export default Register;
-

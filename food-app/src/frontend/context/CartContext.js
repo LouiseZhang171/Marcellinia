@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
 
 // 初始化购物车状态
 const initialState = {
@@ -51,34 +51,23 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
+  const calculateCartTotal = useCallback(() => {
+    dispatch({ type: 'UPDATE_CART_TOTAL' });
+  }, [dispatch]);
+  
   useEffect(() => {
     calculateCartTotal();
-  }, [state.items]);
-
-  const addToCart = (item, quantity) => {
-    dispatch({ type: 'ADD_TO_CART', payload: { ...item, quantity } });
-  };
-
-  const removeFromCart = (item) => {
-    dispatch({ type: 'REMOVE_FROM_CART', payload: item });
-  };
-
-  const updateCartItem = (item, quantity) => {
-    dispatch({ type: 'UPDATE_CART_ITEM', payload: { ...item, quantity } });
-  };
-
-  const calculateCartTotal = () => {
-    dispatch({ type: 'UPDATE_CART_TOTAL' });
-  };
+  }, [calculateCartTotal]);
+  
 
   return (
     <CartContext.Provider
       value={{
         cart: state.items,
         total: state.total,
-        addToCart,
-        removeFromCart,
-        updateCartItem,
+        addToCart: (item, quantity) => dispatch({ type: 'ADD_TO_CART', payload: { ...item, quantity } }),
+        removeFromCart: (item) => dispatch({ type: 'REMOVE_FROM_CART', payload: item }),
+        updateCartItem: (item, quantity) => dispatch({ type: 'UPDATE_CART_ITEM', payload: { ...item, quantity } }),
         calculateCartTotal,
       }}
     >

@@ -1,74 +1,202 @@
 /* src/pages/MenuPage.css */
 
 .menu-page {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .menu-list {
-    width: 30%;
-  }
-  
-  .menu-item {
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-  
-  .menu-item h3 {
-    margin: 0;
-  }
-  
-  .menu-details img {
-    max-height: 300px; /* 你可以根据需要调整这个值 */
-    width: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .menu-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .quantity-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .quantity-button {
-    background-color: #d1b894;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  .confirm-button {
-    background-color: #a5a764;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .totals {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .go-to-cart-button {
-    background-color: #858056;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
+  display: flex;
+}
+
+.menu-list {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  max-width: 250px;
+}
+
+.menu-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.menu-category {
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.menu-category h3 {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.menu-category.selected h3 {
+  border: 1px solid #000;
+}
+
+.category-items {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  cursor: pointer;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.menu-item:hover {
+  color: #000;
+}
+
+.item-detail {
+  flex: 2;
+  padding: 20px;
+}
+
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+  background-color: #f9f9f9; /* Background color for the entire card */
+}
+
+.item-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+  width: 100%;
+  height: 150px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures image covers the area while maintaining aspect ratio */
+  background-color: #fff; /* Background color for the image */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.item-card .text-content {
+  background-color: #f1f1f1; /* Background color for the text */
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.item-card .text-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333; /* Darker text color for better readability */
+}
+
+.item-card .text-content p.name {
+  font-weight: bold; /* Make the name bold */
+}
+
+.item-card .text-content p.price {
+  font-weight: normal; /* Normal weight for the price */
+}
+
+/* Modal styles */
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1000;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-modal-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px; /* 限制图片最大高度 */
+  object-fit: cover; /* 确保图片按比例填充容器 */
+}
+
+.modal-info {
+  margin: 20px 0;
+}
+
+.modal-quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quantity-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.go-to-cart-button {
+  background-color: #b9b07a;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
